@@ -14,7 +14,10 @@ app.post("/verify-captcha", async (req, res) => {
   console.log("Received token:", token);
   const googleRes = await fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { 
+      "Content-Type": "application/json",
+      "Referer": "https://7264857.extforms.netsuite.com/"
+    },
     body: JSON.stringify({
       event: {
         token,
