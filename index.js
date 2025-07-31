@@ -20,7 +20,7 @@ app.post("/verify-captcha", async (req, res) => {
     },
     body: JSON.stringify({
       event: {
-        token,
+        token: token,
         siteKey: process.env.SITE_KEY
       }
     })
